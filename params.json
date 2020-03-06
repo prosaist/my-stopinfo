@@ -2,8 +2,8 @@
 "api_id": "00000000-ABCD-ABCD-0000-000000000000", 
 "phone": "79030000000",
 "stop_urls": [
-{"name": "Koms.+pl.", "url": "https://yandex.ru/maps/213/moscow/?ll=37.656485%2C55.775457&masstransit%5BstopId%5D=stop__9649649&mode=masstransit&z=19"},
-{"name": "ul.+Shchepkina", "url": "https://yandex.ru/maps/213/moscow/?ll=37.628871%2C55.778228&masstransit%5BstopId%5D=stop__9643286&mode=masstransit&z=19"}
+{"name": "Koms.+pl.", "url": "https://yandex.ru/maps/213/moscow/?masstransit[stopId]=stop__9649649&ll=37.656532%2C55.775377&z=19"},
+{"name": "ul.+Shchepkina", "url": "https://yandex.ru/maps/213/moscow/?masstransit[stopId]=stop__9643286&ll=37.629045%2C55.778164&z=19"}
 ],
-"tramways": ["7", "13", "50ê"]
+"tramways": ["7", "50"]
 }

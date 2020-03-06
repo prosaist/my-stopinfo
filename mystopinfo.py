@@ -12,16 +12,16 @@ def send(message):
     with urllib.request.urlopen(sms) as response:
         data = json.loads(response.read().decode())
     return
-
 message = ''
 hour = datetime.now().time().hour
 stop_url = params['stop_urls'][0 if hour < 13 else 1]
 data = proxy.get_stop_info(stop_url['url'])
-for tramway in data['data']['properties']['StopMetaData']['Transport']:
-    name = tramway['name']
-    if name in params['tramways']:
+for transports in data['data']['transports']:
+    name = transports['name']
+    Types = transports['Types']
+    if name in params['tramways'] and 'tramway' in Types:
         message += '%0a' + urllib.parse.quote(name) + '>'
-        for thread in tramway['threads']:
+        for thread in transports['threads']:
             for event in thread['BriefSchedule']['Events']:
                 if 'Estimated' in event:
                     message += event['Estimated']['text'] + ';'

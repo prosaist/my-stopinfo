@@ -7,13 +7,13 @@
  `docker pull owlsoul/ytproxy:latest`
  Запустил докер-контейнер:
  `docker run -it -p 25555:25555 owlsoul/ytproxy:latest`
-4. Открыл [Яндекс Карты](https://yandex.ru/maps/) в браузере, выбрал интересующую остановку и кликнул на неё. URL поменялся на https://yandex.ru/maps/213/moscow/stops/stop__9649649/?ll=37.656740%2C55.775324&z=19. Преобразовал URL к виду https://yandex.ru/maps/213/moscow/?ll=37.656740%2C55.775324&masstransit%5BstopId%5D=stop__9649649&mode=masstransit&z=19 и сохранил его в файле params.json. Интересующие меня номера трамваев записал в массив "tramways".
+4. Открыл [Яндекс Карты](https://yandex.ru/maps/) в браузере, выбрал интересующую остановку и кликнул на неё. URL поменялся на https://yandex.ru/maps/213/moscow/stops/stop__9649649/?ll=37.656740%2C55.775324&z=19. Преобразовал URL к виду https://yandex.ru/maps/213/moscow/?masstransit[stopId]=stop__9649649&ll=37.656740%2C55.775324&z=19 и сохранил его в файле params.json. Интересующие меня номера трамваев записал в массив "tramways".
 5. Отредактировал пути к python.exe и к mystopinfo.py в файле get.cmd.
 6. Мой компьютер включён круглосуточно. В планировщике заданий создал два назначенных задания, указав триггер еженедельно с понедельника по пятницу в нужное время (утром и вечером) и действие C:\Users\user\Projects\my-stopinfo\get.cmd.
 
 sms.ru может присылать до 5 сообщений в сутки бесплатно на зарегистрированный телефон. Если текущее время до 13:00, то информация присылается по первой остановке, иначе, по второй.
 
-![Результат](Screenshot.png)
+![Результат](https://drive.google.com/open?id=1EQlq008fF4E-lx73IT0e2IH7McmPRI91)
 
 
 
